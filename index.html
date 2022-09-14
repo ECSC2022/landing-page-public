@@ -1,9 +1,273 @@
-<code><pre>
-                         *
-    * 
-              Hi ECSC player!
-         *            
-              _o/
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>ECSC'22 A/D CTF</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </head>
+    <body>
+        <nav>
+            <a href="#front">Front</a>
+            <a href="#introduction">Introduction</a>
+            <a href="#pointers">Pointers</a>
+            <a href="#services">Services</a>
+            <a href="#credits">Credits</a>
+        </nav>
+        
+        <audio id='drone-audio' loop autoplay controls controlslist="nodownload nofullscreen noremoteplayback">
+            <source src='/audio/drone.ogg' type='audio/ogg'>
+        </audio>
 
+        <section id="front">
+            <div class="container">
+                <div class="sliding-background">
+                </div>
+            </div>
+            <div class="logo"></div>
+            <div class="footnote">An AI-generated dream</div>
+        </section>
 
-</pre></code>
+        <main>
+            <section id="introduction">
+                <h2>0x01 INTRODUCTION</h2>
+            </section>
+
+            <section>
+                <div class="col">
+                    <p>
+                        A lot of information was lost, so history isn't completely clear on which events led us to arrive at this point. Some say there was a large pandemic. Others believe that the ever-growing demand for computing power to mine cryptocurrencies led to disaster. Nobody really knows anymore, but one thing is for sure: Earth doesn't look like it looked before. Climate change has taken its toll. The poles started melting, and the earth became more and more desolate.
+                    </p>
+                    <p>
+                        Many moved to Austria to escape the rising sea levels. With the big cities gone, small communities started to appear. Relying on trade and exchange of goods, those factions coexisted peacefully. Communication networks were re-established and with the help of motivated hackers, civilization slowly found its way back into the lives of people. However, as global economy had faltered, those communities relied on scavenging whatever technology they could get their hands on to keep the systems up and running. Every little bit of computing power was utilized to keep society alive and also bring back some of the previous comforts.
+                    </p>
+                    <p>
+                        Sadly, this status quo could not be maintained for a long time and factions started to distrust each other, attacking essential systems that prevented communities from falling back into chaos...
+                    </p>
+                </div>
+            </section>
+            
+
+            <section id="pointers">
+                <h2>0x02 POINTERS</h2>
+            </section>
+
+            <section>
+                <div class="col">
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li><a href="https://docs.ecsc2022.eu/ad_intro/">A/D Intro and Code of Conduct</a></li>
+                        <li><a href="https://docs.ecsc2022.eu/ad_platform/">A/D Platform</a></li>
+                        <li><a href="https://docs.ecsc2022.eu/scoring/">Scoring System</a></li>
+                    </ul>
+
+                    <h3>Tl;Dr</h3>
+                    <ul>
+                        <li>Flag format <code>ECSC_[A-Za-z0-9\+/]{32}</code></li>
+                        <li>Flag validity 5 rounds</li>
+                        <li>Round length 3 minutes</li>
+                        <li>2 flag stores per service</li>
+                        <li>Usually multiple vulnerabilities per flag store</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Shortcuts</h3>
+                    <ul>
+                        <li>Scoreboard <a href="http://10.10.254.254">http://10.10.254.254</a></li>
+                        <li>Flag IDs <a href="http://10.10.254.254/competition/teams.json">teams.json</a></li>
+                        <li>Team Dashboard <code>http://10.10.{TEAM_ID}.3/</code></li>
+                        <li>Production VM <code>10.10.{TEAM_ID}.1</code></li>
+                        <li>Staging VM <code>10.10.{TEAM_ID}.2</code></li>
+                        <li>Targets <code>10.10.{2..34}.1</code></li>
+                        <li>NOP Team <code>10.10.1.1</code></li>
+                        <li>Flag Submission Service <code>nc 10.10.254.254 31337</code></li>
+                        <li>Volume Explorer<br>
+                            <code>ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \<br>
+                                  user@10.10.{TEAM_ID}.1 -p 2222</code></li>
+                        
+                    </ul>
+                </div>
+            </section>
+
+            <section id="services">
+                <h2>0x03 SERVICES</h2>
+            </section>
+
+            <section class="service">
+                <div class="col">
+                    <h3>DEWASTE</h3>
+
+                    <p>
+                        As shocking as it may sound, walking barefoot on grass was common in the past. Looking around now, all we can see are mountains made of junk. Former generations romanticized rainy days and the smell of wet ground in the air after a storm. Those generations also made it impossible for us to live the same experiences. Rain is acid, and the land is buried under tens of meters of rubbish.
+                    </p>
+                    <p>
+                        We could not stand this new norm anymore. We hated being in constant danger because of hazardous materials lying around. And we hated being unable to produce medical equipment to cure our beloved ones due to the lack of natural resources on the Planet. But hatred alone brings further destruction, turning people blind and preventing them from realizing the obvious. Indeed, the solution coincided with the problem. All the electronic junk assembled over the centuries is an open-pit mine that we can recycle for good.
+                    </p>
+                    <p>
+                        Welcome to DEWASTE.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="/img/dewaste.jpg" alt="dewaste" class="service">
+                </div>
+            </section>
+
+            <section class="service">
+                <div class="col">
+                    <img src="/img/cantina.jpg" alt="cantina" class="service">
+                </div>
+                <div class="col">
+                    <h3>Cantina</h3>
+                    <p>
+                        Welcome to the Cantina, friend! Enter the best place around, when your budget is low, and your standards are lower! You will never find a more wretched hive of scum and villainy. But we are all a big family here, so no worries. And on the bright side, nobody has to leave hungry, as long as they are willing to put in a little bit of work. But then, if they aren't, they won't leave hungry as well, if you know what I mean. But I'm sure you will be fine. Just don't tamper with anything. Resources are scarce, and as usual, most of them are already scavenged by the big conglomerates like DEWASTE, and Techbay. But we are doing our best to keep things running for the masses. Our underground network reaches quite far. No passport required for you to stay and work here. After everything collapsed, it's not like borders mean anything anymore anyway, right?
+                    </p>
+                    <p>
+                        We even have a Jukebox! I'm sure you haven't even seen one before! I mean, we made some slight modifications to adapt it to our needs. But it's all for the community. And the Music. Aah! Just delightful, I can tell you that. It's all wired up to the rest of our services, and we even have some limited broadcasting services. But of course, everything is wire based: wireless networks can't really be trusted. Not robust enough for critical things. And don't even get me started on those AI whisperers... If a system is too smart, it can't be trusted. Better to use simpler technologies is what I always say. But now come in, I'm sure you are starving already.
+                    </p>
+                </div>
+            </section>
+
+            <section class="service">
+                <div class="col">
+                    <h3>HPS</h3>
+                    <p>
+                        We discovered this hydroelectric power station in the Austrian Alps around 10 years ago. Vegetation took over the buildings, and most systems were unusable due to corrosion. But the massive dam was built to last, not showing cracks or other signs of structural breakdown. We needed clean power, so we started looting other power plants and abandoned factories to repair the damaged equipment.
+                    </p>
+                    <p>
+                        Even if most systems are old and faulty, now the power station represents our only permanent power source that relies entirely on renewable sources. The amount of energy produced is so large that we can even accumulate the surplus for non-essential activities. We also discovered that we could perform cold starts to recover from blackouts by manually forcing the system to open its central valve.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="/img/hps.jpg" alt="HPS" class="service">
+                </div>
+            </section>
+
+            <section class="service">
+                <div class="col">
+                    <img src="/img/aquaeductus.jpg" alt="Aquaeductus" class="service">
+                </div>
+                <div class="col">
+                    <h3>Aquaeductus</h3>
+                    <p>
+                        Who'd have known that balcony gardening would become the most valuable skill in the new world? Long gone are the times of supermarkets and industrial food processing. Now small greenhouses ornate every building, pulsating with the lights of the machines that control them - optimizing every precious drop of water, and every ray of the pale sun that filters through the pollution. Skilled gardeners are the new rockstars, touring across the communes to tend on their vegetable patches, communing with the AIs that forecast the ever-worsening weather. Be sure to be the first to book them.
+                    </p>
+                </div>
+            </section>
+
+            <section class="service">
+                <div class="col">
+                    <h3>Blinkygram</h3>
+                    <p>
+                        Communities lost touch with each other. You could walk days before seeing other survivors, and even then making contact was always risky. Until one day, a treasure trove of brand new communication devices was found. Legend has it that it was a failed product on a tech giant of the old days buried deep into the mountains to avoid a new round of bad press.
+                    </p>
+                    <p>
+                        Blinkygram is a messaging app with a focus on speed and security. It's super-fast, simple, and free. You can use Blinkygram on all your devices simultaneously — but don't expect it to work correctly. Blinkygram has over 300 monthly active users and is one of the 10 messaging apps still operational worldwide.
+                    </p>
+                    <p>
+                        With Blinkygram, you can send messages, text, and more text. You can find people by their usernames. As a result, Blinkygram is like SMS, if you still remember what those are — and can take care of all your business and survival messaging needs. In addition, Blinkygram supports verified payments, meme currencies, as well as secure backups.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="/img/blinkygram.jpg" alt="Blinkygram" class="service">
+                </div>
+            </section>
+
+            <section class="service">
+                <div class="col">
+                    <img src="/img/winds_of_the_past.jpg" alt="Winds of the Past" class="service">
+                </div>
+                <div class="col">
+                    <h3>Winds of the Past</h3>
+                    <p>
+                        Technology left from the unconcerned past heavily relied on electricity to work. However, in a desperate attempt to stop climate change, most conventional power plants were abandoned and are not functional anymore. While this might have helped to prevent even more dramatic effects on our climate, electricity is now a scarce property.
+                    </p>
+                    <p>
+                        Wind turbines are one of the primary sources of electrical energy left by previous generations. But to work correctly, they require constant maintenance and a reliable electrical network to distribute and store the energy produced. Unfortunately, recent fights among local communities disrupted previous attempts to improve the existing turbine management system, and we are still stuck with an outdated piece of software.
+                    </p>
+                </div>
+            </section>
+
+            <section class="service">
+                <div class="col">
+                    <h3>Techbay</h3>
+                    <p>
+                        As the old world collapsed, also the knowledge of how to use technological devices vanished. Only recently, there has been a rise in interest in tech junk from the past. Some people are interested because such devices look great on the walls; others want to understand how they work to give them a new life; for some, they are precious spare parts to fix various equipment.
+                    </p>
+                    <p>
+                        Techbay is a platform to support the bartering of technological goods from the past. Everyone with a valid passport can offer and find items.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="/img/techbay.jpg" alt="Techbay" class="service">
+                </div>
+            </section>
+
+            <section id="credits">
+                <h2>0x04 Credits</h2>
+            </section>
+
+            <section class="credits">
+                <div class="col">
+                    <h3>Infra</h3>
+                    <ul>
+                        <li>Johannes Haring         / <i class="fab fa-discord"></i> <code>exocortex#6163</code></li>
+                        <li>Georg Merzdovnik        / <i class="fab fa-discord"></i> <code>gmerz#5706</code>, <a class="icon" href="https://twitter.com/gmerzdovnik"><i class="fab fa-twitter"></i></a></li>
+                        <li>Leonardo Nodari         / <i class="fab fa-discord"></i> <code>TheNodi#3868</code></li>
+                        <li>Patrick Pirker          / <i class="fab fa-discord"></i> <code>Patralos#0540</code></li>
+                        <li>Michael Pucher          / <i class="fab fa-discord"></i> <code>cluosh#1337</code>, <a class="icon" href="https://twitter.com/cluosh"><i class="fab fa-twitter"></i></a></li>
+                        <li>Marcel Schnideritsch    / <i class="fab fa-discord"></i> <code>BlackHornet#4931</code></li>
+                        <li>Marco Squarcina         / <i class="fab fa-discord"></i> <code>lavish#6824</code>, <a class="icon" href="https://twitter.com/blueminimal"><i class="fab fa-twitter"></i></a></li>
+                        <li>Lorenzo Veronese        / <i class="fab fa-discord"></i> <code>wert310#5057</code>, <a class="icon" href="https://twitter.com/310wert"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Andrea Biondo           / <i class="fab fa-discord"></i> <code>abiondo#3482</code>, <a class="icon" href="https://twitter.com/anbiondo"><i class="fab fa-twitter"></i></a></li>
+                        <li>Matteo Chen             / <i class="fab fa-discord"></i> <code>chq.matteo#8840</code></li>
+                        <li>Patric Gruber           / <i class="fab fa-discord"></i> <code>TheGuy2112#7377</code></li>
+                        <li>Daniele Lain            / <i class="fab fa-discord"></i> <code>daniele#0034</code>, <a class="icon" href="https://twitter.com/_dntt1"><i class="fab fa-twitter"></i></a></li>
+                        <li>Maximilian Lehrbaum     / <i class="fab fa-discord"></i> <code>lehrbaumm#5432</code></li>
+                        <li>Daniel Marth            / <i class="fab fa-discord"></i> <code>nufan#3746</code></li>
+                        <li>Georg Merzdovnik        / <i class="fab fa-discord"></i> <code>gmerz#5706</code>, <a class="icon" href="https://twitter.com/gmerzdovnik"><i class="fab fa-twitter"></i></a></li>
+                        <li>Leonardo Nodari         / <i class="fab fa-discord"></i> <code>TheNodi#3868</code></li>
+                        <li>Patrick Pirker          / <i class="fab fa-discord"></i> <code>Patralos#0540</code></li>
+                        <li>Michael Pucher          / <i class="fab fa-discord"></i> <code>cluosh#1337</code>, <a class="icon" href="https://twitter.com/cluosh"><i class="fab fa-twitter"></i></a></li>
+                        <li>Martin Schwarzl         / <i class="fab fa-discord"></i> <code>Martin Schwarzl#5433</code></li>
+                        <li>Marco Squarcina         / <i class="fab fa-discord"></i> <code>lavish#6824</code>, <a class="icon" href="https://twitter.com/blueminimal"><i class="fab fa-twitter"></i></a></li>
+                        <li>Roland Wallner          / <i class="fab fa-discord"></i> <code>coil#4267</code></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h3>Gameserver</h3>
+                    <ul>
+                        <li>
+                            <a href="https://faust.cs.fau.de/">FAUST CTF</a>
+                            <br>
+                            For providing the gameserver
+                        </li>
+
+                        <li>
+                            <a href="https://saarsec.rocks/">SAARSEC</a>
+                            <br>
+                            For providing the scoreboard
+                        </li>
+                    </ul>
+
+                    <h3>Hall of Fame</h3>
+                    <ul>
+                        <li>
+                            Mario del Gaudio (Team Italy) / <a class="icon" href="https://twitter.com/NotHdesk"><i class="fab fa-twitter"></i></a>
+                            <br>
+                            For reporting a vulnerability in the file viewer
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
